@@ -1,2 +1,2 @@
 def add_tax(price):
-    return round(price * 1.1,2)
+    return round(price * 1.1, 2)
