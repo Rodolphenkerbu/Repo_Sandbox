@@ -1,9 +1,14 @@
-FROM python:3.14      # Start from a Python 3.14 environment
+# Start from a Python 3.14 environment
+FROM python:3.14
 
-WORKDIR /app          # Create/use /app as the working directory
+# Create/use /app as the working directory
+WORKDIR /app
 
-COPY . .              # Copy repository files into the container
+# Copy repository files into the container
+COPY . .
 
-RUN pip install pytest # Install pytest inside the container
+# Install dependencies
+RUN pip install pytest fastapi uvicorn
 
-CMD CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]  # Run run.py when the container starts
+# Start the API server
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
