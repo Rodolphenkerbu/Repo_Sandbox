@@ -6,4 +6,4 @@ COPY . .              # Copy repository files into the container
 
 RUN pip install pytest # Install pytest inside the container
 
-CMD ["python", "run.py"]  # Run run.py when the container starts
+CMD CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]  # Run run.py when the container starts
