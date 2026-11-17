@@ -21,3 +21,6 @@ jobs:
 
       - name: Run tests
         run: python -m pytest
+
+      - name: Build Docker Image
+        run: docker build -t repo-sandbox .
