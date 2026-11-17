@@ -38,5 +38,5 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          docker tag repo-sandbox ghcr.io/${{ github.repository_owner }}/repo-sandbox:latest
-          docker push ghcr.io/${{ github.repository_owner }}/repo-sandbox:latest
+          docker tag repo-sandbox ghcr.io/rodolphenkerbu/repo-sandbox:latest
+          docker push ghcr.io/rodolphenkerbu/repo-sandbox:latest
